@@ -1,5 +1,5 @@
 # RestAPI-TypeScript-MongoDB
-A Rest API written in TypeScript. MongoDB used for database and Express for server creation.
+A Rest API written in TypeScript. Express used for server creation, MongoDB used for database and mongoose for db actions.
 
 ## Concepts
 * REST API principals
