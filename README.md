@@ -2,10 +2,10 @@
 A Rest API written in TypeScript.
 
 ## Technologies
+* TypeScript
 * Node.js
 * MongoDB with Mongoose
-* TypeScript
-* Express.js & Express.js middleware
+* Express.js
 * Zod validation
 
 ## Concepts
