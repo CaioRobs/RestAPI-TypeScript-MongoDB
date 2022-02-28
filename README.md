@@ -1,5 +1,4 @@
-# RestAPI-TypeScript-MongoDB
-A Rest API written in TypeScript.
+# Rest API written in TypeScript.
 
 ## Technologies
 * TypeScript
