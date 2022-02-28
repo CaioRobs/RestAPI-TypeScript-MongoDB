@@ -12,6 +12,7 @@ A Rest API written in TypeScript.
 * REST API principals
     * CRUD
     * HTTP methods
+* MSC Software Architecture
 * JWT & refresh tokens
 * Request validation
 
