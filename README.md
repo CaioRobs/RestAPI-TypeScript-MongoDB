@@ -15,3 +15,10 @@
 * MongoDB with Mongoose
 * Express.js
 * Zod validation
+
+## Data flow
+![](./diagrams/data-flow.png)
+
+
+## Access & refresh token flow
+![](./diagrams/refresh-token-flow.png)
