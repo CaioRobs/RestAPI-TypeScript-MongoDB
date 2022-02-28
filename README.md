@@ -1,4 +1,5 @@
-# Rest API written in TypeScript.
+# My Rest API
+ A Rest API written in TypeScript, with a MongoDB database, integrated with Mongoose
 
 ## Technologies
 * TypeScript
