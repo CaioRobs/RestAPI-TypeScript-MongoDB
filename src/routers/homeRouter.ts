@@ -1,12 +1,9 @@
 import { Router } from "express";
-import {
-  errorCheckController,
-  healthCheckController,
-} from "../controllers/homeController";
+import { errorCheck, healthCheck } from "../controllers/homeController";
 
-const indexRoute = "/";
+const route = "/";
 const homeRouter = Router();
 
-homeRouter.route("/").get(healthCheckController).post(errorCheckController);
+homeRouter.route("/").get(healthCheck).post(errorCheck);
 
-export default { path: indexRoute, router: homeRouter };
+export default { path: route, router: homeRouter };
