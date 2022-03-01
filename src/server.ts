@@ -1,10 +1,10 @@
 import c from "config";
 import "dotenv/config";
 import App from "./App";
-import routes from "./routers/routes";
+import routers from "./routers/routers";
 
 const PORT = c.get<number>("port");
 
-const app = new App(routes);
+const app = new App(routers);
 
 app.listen(PORT);

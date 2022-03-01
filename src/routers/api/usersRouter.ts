@@ -1,4 +1,4 @@
-import { Router } from "express";
+import { Application, Router } from "express";
 import {
   createUserHandler,
   getAllUsersHandler,
@@ -14,4 +14,4 @@ usersRouter
   .get(getAllUsersHandler)
   .post(validateResource(createUserSchema), createUserHandler);
 
-export default { path: route, router: usersRouter };
+export default (app: Application) => app.use(route, usersRouter);
