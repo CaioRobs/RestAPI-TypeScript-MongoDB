@@ -6,7 +6,7 @@ export const healthCheckController = (_req: Request, res: Response) =>
 
 export const errorCheckController = (
   _req: Request,
-  res: Response,
+  _res: Response,
   next: NextFunction
 ) => {
   try {

@@ -6,7 +6,7 @@ const stream = pretty({
   colorize: true,
 });
 
-const logger = pino(
+const log = pino(
   {
     base: {
       pid: false,
@@ -16,4 +16,4 @@ const logger = pino(
   stream
 );
 
-export default logger;
+export default log;

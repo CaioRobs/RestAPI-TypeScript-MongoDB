@@ -4,7 +4,6 @@ import config from "config";
 import log from "./utils/logger";
 import errorMiddleware from "./middlewares/errorMiddleware";
 import Router from "./interfaces/RouterInterface";
-import logger from "./utils/logger";
 
 export default class App {
   public app: Application;
@@ -51,7 +50,7 @@ export default class App {
 
   public listen(port: number) {
     this.app.listen(port, () => {
-      log.info(`app running at http://localhost:${port}`);
+      log.info(`App running at http://localhost:${port}`);
     });
   }
 }

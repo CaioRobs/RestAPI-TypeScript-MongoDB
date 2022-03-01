@@ -1,12 +1,14 @@
-import { Request, Response } from "express";
-import logger from "../utils/logger";
+import { NextFunction, Request, Response } from "express";
 import { createUser } from "../services/userService";
 
-export const createUserHandler = async (req: Request, res: Response) => {
+export const createUserHandler = async (
+  req: Request,
+  _res: Response,
+  next: NextFunction
+) => {
   try {
     const user = await createUser(req.body);
   } catch (error: any) {
-    logger.error(error);
-    return res.status(409).json({ messaeg: error.message });
+    next(error);
   }
 };

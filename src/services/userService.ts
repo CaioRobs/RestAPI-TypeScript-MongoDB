@@ -1,5 +1,6 @@
 import { DocumentDefinition } from "mongoose";
-import UserModel, { UserDocument } from "../models/userModel";
+import UserModel from "../models/userModel";
+import UserDocument from "../interfaces/UserDocument";
 
 export const createUser = async (input: DocumentDefinition<UserDocument>) => {
   try {
