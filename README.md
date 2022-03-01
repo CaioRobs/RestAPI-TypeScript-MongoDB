@@ -1,15 +1,18 @@
 # My Rest API
+
  A Rest API written in TypeScript, with a MongoDB database, integrated with Mongoose
 
 ## Concepts
+
 * REST API principals
-    * CRUD
-    * HTTP methods
+  * CRUD
+  * HTTP methods
 * MSC Software Architecture
 * JWT & refresh tokens
 * Request validation
 
 ## Technologies
+
 * TypeScript
 * Node.js
 * MongoDB with Mongoose
@@ -17,8 +20,9 @@
 * Zod validation
 
 ## Data flow
+
 ![](./diagrams/data-flow.png)
 
-
 ## Access & refresh token flow
+
 ![](./diagrams/refresh-token-flow.png)
