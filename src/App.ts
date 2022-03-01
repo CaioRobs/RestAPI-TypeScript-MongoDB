@@ -19,13 +19,15 @@ export default class App {
   }
 
   private async connectToDatabase() {
-    log.info(`Connecting to DB...`);
+    const dbName = config.get<string>("dbName");
     const dbUri = config.get<string>("dbUri");
+
     try {
+      log.info(`Connecting to DB: ${dbName}...`);
       await mongoose.connect(dbUri);
       log.info("Connected to DB");
     } catch (error) {
-      log.error("Could not connect to DB");
+      log.error(`Could not connect to ${dbName}`);
       process.exit(1);
     }
   }
