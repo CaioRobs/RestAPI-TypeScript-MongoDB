@@ -25,7 +25,6 @@ export default class App {
       log.info(`Connecting to DB: ${dbName}...`);
 
       await mongoose.connect(dbUri);
-      mongoose.Promise = global.Promise;
 
       log.info("Connected to DB");
     } catch (error) {
