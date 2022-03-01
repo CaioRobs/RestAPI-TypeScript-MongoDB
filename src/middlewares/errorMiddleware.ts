@@ -9,7 +9,7 @@ const errorMiddleware = (
   _next: NextFunction
 ) => {
   const status = error.status || 500;
-  const message = error.message || "Somethin went wrong";
+  const message = error.message || "Something went wrong";
   log.error(error);
   return res.status(status).json({ message });
 };

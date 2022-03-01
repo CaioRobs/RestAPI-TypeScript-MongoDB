@@ -1,4 +1,3 @@
-import { DocumentDefinition } from "mongoose";
 import { omit } from "lodash";
 import UserModel from "../models/userModel";
 import { CreateUserInput } from "../schemas/userSchema";
