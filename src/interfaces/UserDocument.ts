@@ -6,5 +6,5 @@ export default interface UserDocument extends mongoose.Document {
   password: string;
   createdAt: Date;
   updatedAt: Date;
-  comparePassowrd(candidatePassword: string): Promise<boolean>;
+  comparePassword(candidatePassword: string): Promise<boolean>;
 }

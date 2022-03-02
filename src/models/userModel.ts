@@ -7,7 +7,7 @@ const userSchema = new mongoose.Schema(
   {
     email: { type: String, require: true, unique: true },
     name: { type: String, required: true },
-    passord: { type: String, required: true },
+    password: { type: String, required: true },
   },
   {
     timestamps: true,
@@ -15,7 +15,7 @@ const userSchema = new mongoose.Schema(
 );
 
 userSchema.pre("save", async function (next) {
-  let user = this as UserDocument;
+  const user = this as UserDocument;
 
   if (!user.isModified("password")) {
     return next();
@@ -33,10 +33,9 @@ userSchema.methods.comparePassword = async function (
   candidatePassword: string
 ): Promise<boolean> {
   const user = this as UserDocument;
-
   return bcrypt.compare(candidatePassword, user.password).catch((_e) => false);
 };
 
-const UserModel = mongoose.model("User", userSchema);
+const UserModel = mongoose.model<UserDocument>("User", userSchema);
 
 export default UserModel;

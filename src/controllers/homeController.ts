@@ -1,10 +1,10 @@
 import { NextFunction, Request, Response } from "express";
 import NetworkAuthException from "../exceptions/NetworkAuthException";
 
-export const healthCheckController = (_req: Request, res: Response) =>
-  res.sendStatus(201);
+export const healthCheck = (_req: Request, res: Response) =>
+  res.sendStatus(200);
 
-export const errorCheckController = (
+export const errorCheck = (
   _req: Request,
   _res: Response,
   next: NextFunction
