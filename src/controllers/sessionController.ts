@@ -4,6 +4,8 @@ import { validatePassword } from "../services/userService";
 import { createSession } from "../services/sessionService";
 import { CreateSessionInput } from "../schemas/sessionSchema";
 import { signJwt } from "../utils/jwtUtils";
+import HttpException from "../exceptions/HttpException";
+import log from "../utils/logger";
 
 export const createSessionHandler = async (
   req: Request<{}, {}, CreateSessionInput>,
@@ -14,7 +16,7 @@ export const createSessionHandler = async (
     const user = await validatePassword(req.body);
 
     if (!user) {
-      return res.status(401).json({ message: "Invalid email or password" });
+      throw new HttpException(401, "Invalid email or password");
     }
 
     const session = await createSession(user._id, req.get("user-agent") || "");
