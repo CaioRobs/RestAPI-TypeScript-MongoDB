@@ -3,18 +3,17 @@ import mongoose from "mongoose";
 import config from "config";
 import log from "./utils/logger";
 import errorMiddleware from "./middlewares/errorMiddleware";
-import Router from "./interfaces/RouterInterface";
 
 export default class App {
   public app: Application;
 
-  constructor(routers: Router[]) {
+  constructor(routers: Function[]) {
     log.info(`Initializing app...`);
     this.app = express();
 
     this.connectToDatabase();
     this.initializeMiddlewares();
-    this.initializeRoutes(routers);
+    this.initializeRouters(routers);
     this.initializeErrorHandling();
   }
 
@@ -24,7 +23,9 @@ export default class App {
 
     try {
       log.info(`Connecting to DB: ${dbName}...`);
+
       await mongoose.connect(dbUri);
+
       log.info("Connected to DB");
     } catch (error) {
       log.error(`Could not connect to ${dbName}`);
@@ -38,11 +39,11 @@ export default class App {
     this.app.use(express.json());
   }
 
-  private initializeRoutes(routers: Router[]) {
-    log.info(`Initializing routes...`);
+  private initializeRouters(routers: Function[]) {
+    log.info(`Initializing routers...`);
 
-    routers.forEach(({ path, router }) => {
-      this.app.use(path, router);
+    routers.forEach((router) => {
+      router(this.app);
     });
   }
 
