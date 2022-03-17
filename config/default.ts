@@ -1,9 +1,7 @@
-const dbName = "TypeMongoAPI";
-
 export default {
   port: 8888,
-  dbName,
-  dbUri: `mongodb://root:alohomora@localhost:27017/${dbName}?authSource=admin&readPreference=primary&ssl=false`,
+  dbName: "TypeMongoAPI",
+  dbUri: `mongodb://root:alohomora@localhost:27017/TypeMongoAPI?authSource=admin&readPreference=primary&ssl=false`,
   saltWorkFactor: 10,
   accessTokenTtl: "15min",
   refreshTokenTtl: "1y",
@@ -27,5 +25,5 @@ hYw4COyG0Rm5KcNKAUwo5LOeURJRIaEB1MX7Gd6IA0er1Onn19z/BxSJzwJBAIHT
 dXwR22sx/ap5DOGGvzangSFA1L8xf8+10BtSI3m/z+aokK3MYmoUujquhKs5uwTM
 IGP88f8bnhXdHHbi8EECQGfn2KPtwgeaipk74dAcMqlOZrJlePHfnSZEIrvsGXsP
 zQ102iwvNyzZXHPG19NfA/N0J3t5VDEZWA2kgKAp2FU=
------END RSA PRIVATE KEY-----`
+-----END RSA PRIVATE KEY-----`,
 };
