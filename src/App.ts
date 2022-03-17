@@ -53,7 +53,7 @@ export default class App {
 
   public listen(port: number) {
     this.app.listen(port, () => {
-      log.info(`App running at http://localhost:${port}`);
+      log.info(`App running in port: ${port}`);
     });
   }
 }
