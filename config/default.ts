@@ -1,6 +1,6 @@
 export default {
   port: 8888,
-  dbUri: "mongodb://root:alohomora@cluster0.lfbxm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  dbUri: "mongodb+srv://root:alohomora@cluster0.lfbxm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
   saltWorkFactor: 10,
   accessTokenTtl: "15min",
   refreshTokenTtl: "1y",
