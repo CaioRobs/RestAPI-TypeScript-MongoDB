@@ -13,6 +13,7 @@ export const createSessionHandler = async (
   next: NextFunction
 ) => {
   try {
+    const {email, password} = req.body
     const user = await validatePassword(req.body);
 
     if (!user) {
