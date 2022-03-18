@@ -1,5 +1,4 @@
 import c from "config";
-import "dotenv/config";
 import App from "./App";
 import routers from "./routers/routers";
 
