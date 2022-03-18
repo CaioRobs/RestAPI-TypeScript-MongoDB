@@ -27,6 +27,7 @@ export default class App {
 
       log.info("Connected to DB");
     } catch (error) {
+      console.log(error)
       log.error(`Could not connect to DB`);
       process.exit(1);
     }
