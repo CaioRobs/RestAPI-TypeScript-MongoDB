@@ -52,6 +52,7 @@ export default class App {
   }
 
   public listen(port: number) {
+    log.info(`porta selecionada: ${port}`)
     this.app.listen(port, () => {
       log.info(`App running in port: ${port}`);
     });
